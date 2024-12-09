@@ -216,7 +216,7 @@ public class BoardController {
 
 		UserDto user = (UserDto) session.getAttribute("user");
 
-		commentService.regComment(content, boardNum, user.getUserId());
+		commentService.regComment(content, boardNum, user.getUserNickname());
 		List<CommentDto> commentList = commentService.getCommentList(boardNum);
 		model.addAttribute("comment", commentList);
 
